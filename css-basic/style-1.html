@@ -12,6 +12,7 @@
 
   <!-- Internal Stylesheet -->
   <!-- head 요소 내부에 <style> 태그를 사용하여 스타일을 지정하는 방법 -->
+  <!-- 해당 HTML에 내부에서만 스타일이 적용됨 -->
     <style>
       #color-blue{
         color : blue;
@@ -20,13 +21,40 @@
 
   <!-- Extanal Stylesheet -->
   <!-- HTML 외부에 CSS 파일을 작성하고 HTML에 연결하여 스타일을 지정하는 방법 -->
+  <!-- 해당 CSS를 연결한 모든 HTML에서 스타일이 적용됨 -->
   <link rel="stylesheet" href="style-1.css" />
 </head>
 <body>
   <!-- Inline Style -->
   <!-- HTML 요소 내부에 style 속성을 사용하여 스타일을 지정하는 방법 -->
+  <!-- 지정한 하나의 요소에 대해서만 스타일 적용을 하게 됨 -->
   <h4 style="color: red;">Inline Style을 적용한 요소입니다.</h4>
   <h4 id="color-blue">Internal Stylesheet를 적용한 요소입니다.</h4>
   <h4 id="color-green">Extanal Stylesheet를 적용한 요소입니다.</h4>
+  <p>태그(요소) 선택자로 스타일을 적용한 요소입니다.</p>
+  <h4 class="color-purple">클래스 선택자로 스타일을 적용한 요소입니다.</h4>
+
+  <div class="super">
+    <div class="sub-1">super의 자식 요소입니다.</div>
+    <div>
+      <div class="sub-1">super의 자손 요소입니다.</div>
+    </div>
+  </div>
+  <div class="sub-1">단독 sub-1 요소입니다.</div>
+  <br><br><br>
+  <div class="super">
+    <div class="sub-2">super의 자식 요소입니다.</div>
+    <div>
+      <div class="sub-2">super의 자손 요소입니다.</div>
+    </div>
+  </div>
+  <div class="sub-2">단독 sub-2 요소입니다.</div>
+
+  <a href="https://google.com">Google 링크</a>
+  <a href="https://naver.com">NAVER 링크</a>
+  <a href="https://www.naver.com">NAVER 링크</a>
+
+  <h2 class="on-mouse">가상 클래스 선택자로 스타일을 적용한 요소입니다.</h2>
+  <h2 class="comment">가상 요소 선택자로 스타일을 적용한 요소입니다.</h2>
 </body>
 </html>
