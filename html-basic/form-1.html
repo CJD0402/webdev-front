@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Form 요소</title>
+</head>
+<body>
+  <!-- 폼 요소 : 사용자로부터 입력을 받고 그에 대한 작업을 정의하는 요소 -->
+  <!-- form 요소 : 사용자로부터 받은 입력을 어디로, 어떤 방식으로 전송할지를 정의하는 요소 -->
+  <!-- action 속성 : 입력을 '어디로' 전송할지를 정의하는 속성 -->
+  <!-- method 속성 : 입력을 '어떻게' 전송할지를 정의하는 속성 -->
+  <!-- # GET 방식 : 데이터를 전송할 때 이름 = 값 형태를 url에 붙여서 전송 -->
+  <!-- # 도메인주소?name1=value1&name2=value2&... -->
+  
+  <!-- # POST 방식 : 데이터를 전송할 때 객체형태로 request body를 통해서 전송 -->
+  
+  <form action="./form-2.html" method="POST">
+    <!-- input 요소 : 사용자로부터 입력을 받아오는 요소 -->
+    <!-- placeholder : 입력에 대한 설명 지정하는 속성 -->
+    <!-- value : input 요소의 기본값을 지정하는 속성 -->
+    <input placeholder="입력설명입니다." value="default" />
+    <!-- type : 입력을 어떻게 받을지를 지정하는 속성 -->
+    <!-- name : 입력한 값을 어떤 이름으로 action에 지정된 위치로 전달할지 지정하는 속성 -->
+    <input type="text" name="textValue" />
+    <input type="password" name="passwordValue" />
+    <input type="number" name="numberValue" min="0" max="10" />
+    <input type="range" name="rangeValue" min="0" max="10" />
+    <input type="date" name="dateValue" />
+    <input type="time" name="timeValue" />
+    <input type="datetime-local" name="datetimeValue" />
+    <!-- checkbox : 선택 그룹이 있을 때 0개 이상의 선택을 할 수 있음 -->
+    <input type="checkbox" name="checkValue" value="check1" checked />
+    <input type="checkbox" name="checkValue" value="check2" />
+    <!-- radio : 선택 그룹이 있을 때 1개의 선택만 할 수 있음 -->
+    <input type="radio" name="radioValue" value="radio1" checked />
+    <input type="radio" name="radioValue" value="radio2" />
+    <input type="hidden" name="hiddenValue" value="hiddenValue" />
+    <input type="file">
+
+    <!-- button 요소 : 사용자로부터 클릭 이벤트를 사용할 수 있도록 하는 요소 -->
+    <!-- type 속성 : 사용자가 클릭을 했을 때 어떤 이벤트를 발생시킬지 지정하는 속성 -->
+    <button type="button">버튼</button>
+    <button type="reset">초기화</button>
+    <button type="submit">제출</button>
+    
+    <select name="selectValue">
+      <option value="사과">사과</option>
+      <option value="배" selected>배</option>
+      <option value="바나나">바나나</option>
+    </select>
+    
+  </form>
+
+</body>
+</html>
