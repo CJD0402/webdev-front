@@ -43,3 +43,7 @@ a[href="https://naver.com"] {
 .comment::first-letter {
   color: red;
 }
+
+.font-weight-900 {
+  font-weight: 900;
+}

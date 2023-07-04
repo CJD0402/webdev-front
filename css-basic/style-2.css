@@ -1,0 +1,77 @@
+body{
+  height: 200vh;
+}
+
+#item {
+  /* color : 텍스트(내용물)의 색상 지정 */
+  color: white;
+  
+  /* background-color : 배경의 색상 지정 */
+  background-color: green;
+
+  /* font-size : 폰트의 크기 지정 */
+  font-size: 25px;
+
+  /* height, width : 요소의 높이와 너비 지정 */
+  height: 400px;
+  width: 600px;
+
+  /* border : 요소의 테두리를 지정 */
+  border: 15px solid red;
+
+  /* margin, padding : 요소의 내외부 여백을 지정 (margin : 외부 / padding : 내부) */
+  margin: 40px;
+  padding: 80px;
+
+  /* display : 요소의 표시 방법 지정 */
+  display: inline-block;
+
+  /* position : 요소의 위치 지정 */
+  position: fixed;
+  top: 200px;
+  right: 50px;
+
+  /* transition, transform, animation : 요소의 변환이나 애니메이션을 지정 */
+  transform: rotate(15deg);
+  /* animation: 3s ease-in 1s 2 reverse both paused slidein; */
+}
+
+/* 색상 지정 방식 */
+/* 색상 명칭 */
+.color-red {
+  color: red;
+}
+
+/* RGB */
+.color-rgb-255-0-0 {
+  color: rgb(255, 0, 0);
+}
+
+/* RGBA */
+.color-rgba-255-0-0-04 {
+  color: rgba(255, 0, 0, 0.4);
+}
+
+/* HEX */
+.color-hex-ff0000 {
+  color: #ff0000;
+  opacity: 0.4;
+}
+
+/* 글꼴 지정 방식 */
+/* fonot-family : 글자체 변경 */
+.font-family {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* font-size : 글자 크기 변경 */
+.font-size {
+  /* 사이즈 단위 */
+  /* 절대적 단위 : px(픽셀), cm(센티미터), in(인치) ... */
+  /* 상대적 단위 */
+  /* %(퍼센트) : 부모 요소 사이즈 대비 비율 */
+  /* em : '부모' 텍스트 사이즈 대비 비율 (부모 텍스트 사이즈 10px -> 2em = 20px) */
+  /* rem : '루트(html) 요소' 텍스트 사이즈 대비 비율 (루트 텍스트 사이즈 10px -> 2rem = 20px) */
+  /* vw, vh : 'Viewport' 대비 비율 (vw : 너비 대비 / vh : 높이 대비) - (뷰포트 너비 1920px -> 10vw = 192px) */
+  font-size: 40px;
+}
