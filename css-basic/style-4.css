@@ -1,0 +1,40 @@
+/* ! 포지션 : 요소의 위치를 지정하는 속성 */
+.box {
+  background-color: royalblue;
+  height: 300px;
+  width: 300px;
+}
+
+/* static : 기본값, 이전 요소 바로 다음에 위치, left / top  / right / bottom 속성이 적용 안됨 */
+.position-static {
+  position: static;
+}
+
+/* relative : 요소의 기본 위치를 기준으로 상대적 위치를 지정 */
+.position-relative {
+  position: relative;
+  top: 100px;
+  left: 200px;
+}
+
+/* absolute : 조상 중 가장 가까운 위치가 지정된 조상의 요소를 기준으로  절대적 위치를 지정 */
+.position-absolute {
+  position: absolute;
+  top: 200px;
+  left: 100px;
+}
+
+/* fixed : 뷰포트 기준으로 위치를 지정 */
+.position-fixed {
+  position: fixed;
+  right: 200px;
+  bottom: 200px;
+}
+
+/* ! 디스플레이 : 요소가 웹페이지에 어떻게 보여질지 지정하는 속성 */
+.display {
+  /* block : 한 줄 전체를 차지하는 속성 값 */
+  /* inline : 내용의 크기만큼 차지하는 속성 값 */
+  /* inline-block : 기본적으로 내용의 크기만큼 차지하지만 너비와 높이를 지정할 수 있는 속성 값 */
+  /* none : 화면에서 가리는 속성 값 */
+}

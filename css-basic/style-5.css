@@ -1,0 +1,73 @@
+body{margin: 0;}
+
+/* Flex : 컨테이너 요소 안의 아이템 요소들이 최적의 공간을 차지하면서 */
+/*        뷰포트와 아이템 요소 크기에 따라서 유연하게 조절되는 레이아웃 */
+
+/* Flex Container : 아이템 요소를 담는 부모 요소 */
+.flex-container {
+  background-color: #000;
+  height: 1000px;
+  display: flex;
+  /* flex-direction : Flex 레이아웃의 주 축 지정 */
+  /* row : (정 가로 축) / row-reverse : (역 가로 축) / */
+  /* column : (정 세로 축) / column-reverse : (역 세로 축) */
+  flex-direction: row;
+
+  /* flex-wrap : Flex 레이아웃의 아이템이 한 줄에 위치할지 여러 줄에 위치할지 결정 */
+  /* nowrap : 한 줄 / wrap : 정 여러 줄 / wrap-reverse : 역 여러 줄 */
+  flex-wrap: nowrap;
+
+  /* flex-flow : flex-direction + flex-wrap */
+  /* # flex-flow: row nowrap; */
+
+  /* justify-content : 주 축을 기준으로 아이템 요소를 어떻게 정렬할지 지정 */
+  /* flex-start : 시작 정렬 / flex-end : 끝 정렬 / center : 중앙 정렬 */
+  /* space-between : 양 끝의 공백을 없애고  아이템 사이 간격을 동일하게 하는 정렬 */
+  /* space-around : 아이템 요소의 갯수 만큼 동일한 공간을 할당하고 그 공간에서 중앙 정렬 */
+  /* space-evenly : 양끝의 공백을 포함하여 아이템 사이 간격을 동일하게 하는 정렬 */
+  justify-content: center;
+  
+  /* align-items : 교차 축을 기준으로 아이템 요소를 어떻게 정렬할지 지정 */
+  /* flex-start : 시작 정렬 / flex-end : 끝 정렬 / center : 중앙 정렬 */
+  align-items: flex-start;
+}
+
+.flex-item-1 {
+  background-color: royalblue;
+  height: 300px;
+  width: 300px;
+  /* oreder : 아이템 요소의 순번을 지정 */
+  /* # order: 1; */
+
+  /* flex-grow : 아이템 요소의 성장 비율을 지정 */
+  /* # flex-grow: 1; */
+
+  /* flex-shrink : 아이템 요소의 수축 비율을 지정 */
+  /* # flex-shrink: 1; */
+
+  /* flex-basis : 아이템 요소의 기본 크기를 지정 */
+  flex-basis: 100px;
+
+  /* flex : flex-grow + flex-shrink + flex-basis */
+  /* # flex: 1 1 100px; */
+}
+
+.flex-item-2 {
+  background-color: teal;
+  height: 300px;
+  width: 300px;
+  /* oreder : 아이템 요소의 순번을 지정 */
+  /* # order: 1; */
+
+  /* flex-grow : 아이템 요소의 성장 비율을 지정 */
+  /* # flex-grow: 2; */
+
+  /* flex-shrink : 아이템 요소의 수축 비율을 지정 */
+  /* # flex-shrink: 2; */
+
+  /* flex-basis : 아이템 요소의 기본 크기를 지정 */
+  flex-basis: 200px;
+
+  /* flex : flex-grow + flex-shrink + flex-basis */
+  /* # flex: 2 2 200px; */
+}
