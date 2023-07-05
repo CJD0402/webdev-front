@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'GimhaeGaya';
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gimhae/GimhaeGayaR.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gimhae/GimhaeGayaR.eot?#iefix') format('embedded-opentype'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/gimhae/GimhaeGayaR.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/gimhae/GimhaeGayaR.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/gimhae/GimhaeGayaR.ttf') format("truetype");
+  font-display: swap;
+} 
+@font-face {
+  font-family: 'GimhaeGaya';
+  font-weight: 700;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gimhae/GimhaeGayaB.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gimhae/GimhaeGayaB.eot?#iefix') format('embedded-opentype'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/gimhae/GimhaeGayaB.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/gimhae/GimhaeGayaB.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/gimhae/GimhaeGayaB.ttf') format("truetype");
+  font-display: swap;
+} 
+
+body {
+  margin: 0;
+  font-family: 'GimhaeGaya';
+}
+
+#header {
+  height: 64px;
+  padding: 0 120px;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo:hover {
+  cursor: pointer;
+}
+
+.header-logo-icon {
+  background-image: url(asset/header_logo.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  width: 24px;
+  height: 24px;
+}
+
+.header-logo-text {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.header-search-icon {
+  background-image: url(asset/search.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  width: 24px;
+  height: 24px;
+}
+
+.header-search-icon:hover {
+  cursor: pointer;
+}
