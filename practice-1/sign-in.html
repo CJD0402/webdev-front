@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dong's board Sign In</title>
   <link rel="stylesheet" href="style.css" />
+  <script>
+    function onLoginClickEvent(){
+      alert('로그인 버튼 클릭');
+    }
+  </script>
 </head>
 <body>
   <div id="wrapper">
@@ -46,7 +51,7 @@
             </div>
           </div>
           <div class="main-right-card-bottom">
-            <button class="sign-in-button">로그인</button>
+            <button class="sign-in-button" onclick="onLoginClickEvent()">로그인</button>
             <div class="sign-up-description">
               신규 사용자이신가요? <a href="#" class="emphasis">회원가입</a>
             </div>
