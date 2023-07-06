@@ -1,0 +1,223 @@
+@font-face {
+  font-family: 'GimhaeGaya';
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gimhae/GimhaeGayaR.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gimhae/GimhaeGayaR.eot?#iefix') format('embedded-opentype'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/gimhae/GimhaeGayaR.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/gimhae/GimhaeGayaR.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/gimhae/GimhaeGayaR.ttf') format("truetype");
+  font-display: swap;
+} 
+@font-face {
+  font-family: 'GimhaeGaya';
+  font-weight: 700;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gimhae/GimhaeGayaB.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gimhae/GimhaeGayaB.eot?#iefix') format('embedded-opentype'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/gimhae/GimhaeGayaB.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/gimhae/GimhaeGayaB.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/gimhae/GimhaeGayaB.ttf') format("truetype");
+  font-display: swap;
+} 
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'GimhaeGaya';
+}
+
+#header {
+  height: 64px;
+  padding: 0 120px;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#main {
+  background-image: url(asset/background.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  
+  display: flex;
+  padding: 100px 120px 150px;
+  
+  height: calc(100vh - 64px - 100px - 150px);
+  
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo:hover {
+  cursor: pointer;
+}
+
+.header-logo-icon {
+  background-image: url(asset/header_logo.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  width: 24px;
+  height: 24px;
+}
+
+.header-logo-text {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.header-search-icon {
+  background-image: url(asset/search.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  width: 24px;
+  height: 24px;
+}
+
+.header-search-icon:hover {
+  cursor: pointer;
+}
+
+.main-left-container {
+  /* flex : grow shrink baisis */
+  /* felx :  7 7 aute */
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-left-icon {
+  background-image: url(asset/main_logo.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  
+  width: 50px;
+  height: 50px;
+}
+
+.main-left-text-box {
+  margin-top: 20px;
+}
+
+.main-left-text {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -1.2px;
+  text-align: center;
+}
+
+.main-right-container {
+  flex: 5;
+}
+
+.main-right-card {
+  background-color: #fff;
+  height: calc(100% - 80px);
+  border-radius: 10px;
+  padding: 50px 50px 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sign-in-text {
+  font-family: 'Pretendard-Regular';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.input-box {
+  margin-top: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.input-label {
+  font-family: 'Pretendard-Regular';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  opacity: 0.7;
+}
+
+.input-container {
+  margin-top: 5px;
+  padding: 13px 0;
+  display: flex;
+
+}
+
+.input {
+  flex: 1;
+  background: none;
+  outline: none;
+  border: none;
+  font-family: 'Pretendard-Regular';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.show-icon {
+  margin-right: 16px;
+  background-image: url(asset/eye_light.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  width: 24px;
+  height: 24px;
+}
+
+.show-icon:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 25%;
+}
+
+.sign-in-button {
+  height: 48px;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 46px;
+
+  font-family: 'Pretendard-Regular';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.sign-up-description {
+  margin-top: 20px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: 'Pretendard-Regular';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.emphasis {
+  color: #000;
+  text-decoration: none;
+}
