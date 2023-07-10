@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.css';
+import { useState, Dispatch, SetStateAction } from 'react'
 
 function Header() {
   return (
@@ -38,23 +39,33 @@ function MainLeftContainer () {
 
 
 function MainRightContainer () {
+
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+
   return (
     <div className="main-right-container">
       <div className="main-right-card">
-      <MainRgihtCardTop />
-      <MainRgihtCardBottom />
+      <MainRightCardTop setEmail={setEmail} setPassword={setPassword} />
+      <MainRightCardBottom email={email} password={password} />
       </div>
     </div>
   );
 }
 
-function MainRgihtCardTop () {
+
+interface MainRightCardTopProps {
+  setEmail: Dispatch<SetStateAction<string>>;
+  setPassword: Dispatch<SetStateAction<string>>;
+}
+
+function MainRightCardTop ({ setEmail, setPassword }:MainRightCardTopProps) {
   return (
     <div className="main-right-card-top">
       <div className="sign-in-text">로그인</div>
       <div className="sign-in-input-container">
-        <InputBox label='이메일 주소' show={false} type='text' />
-        <InputBox label='비밀번호' show={true} type='password' />
+        <InputBox label='이메일 주소' show={false} type='text' set={setEmail} />
+        <InputBox label='비밀번호' show={true} type='password' set={setPassword} />
       </div>
     </div>
   );
@@ -64,9 +75,10 @@ interface InputBoxProps {
   label: string;
   show: boolean;
   type: string;
+  set: Dispatch<SetStateAction<string>>;
 }
 
-function InputBox ({ label, show, type }: InputBoxProps) {
+function InputBox ({ label, show, type, set }: InputBoxProps) {
 
   const placeholder = `${label}를 입력해 주세요.`
 
@@ -74,18 +86,27 @@ function InputBox ({ label, show, type }: InputBoxProps) {
     <div className="input-box">
       <div className="input-label">{label}</div>
       <div className="input-container">
-        <input className="input" type={type} placeholder= {placeholder} />
+        <input className="input" type={type} placeholder= {placeholder} onChange={(event) => set(event.target.value)} />
         { show && (<div className="show-icon"></div>) }
       </div>
     </div>
   );
 }
 
+interface MainRightCardBottomProps {
+  email: string;
+  password: string;
+}
 
-function MainRgihtCardBottom () {
+function MainRightCardBottom ({ email, password }: MainRightCardBottomProps) {
+
+  const onSignInButtonHandler = () => {
+    alert(`email : ${email}, password: ${password}`);
+  }
+
   return (
     <div className="main-right-card-bottom">
-      <button className="sign-in-button" >로그인</button>
+      <button className="sign-in-button" onClick={onSignInButtonHandler}>로그인</button>
       <div className="sign-up-description">
         신규 사용자이신가요? <a href="#" className="emphasis">회원가입</a>
       </div>
