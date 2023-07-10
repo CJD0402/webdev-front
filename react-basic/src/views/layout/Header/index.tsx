@@ -1,7 +1,9 @@
-import React from 'react'
+interface Props {
+  count: number;
+}
 
-export default function Header() {
+export default function Header({ count }: Props) {
   return (
-    <div>Header</div>
+    <div>Header : {count} </div>
   )
 }
